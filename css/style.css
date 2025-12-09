@@ -1,0 +1,277 @@
+:root {
+    --dark-brown: #240C03;
+    --brown-header: rgba(36, 12, 3, 0.90);
+    --orange-btn: #E19517;
+    --orange-btn-hover: #c58315;
+    --text-neutral: #374151;
+    --wheat: #E8E8E8;
+    --brown-card: rgba(48, 25, 17, 0.9);
+    --brown-text: #452012;
+    --form-stroke: #DBDBDB;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    font-family: "Inter", sans-serif;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+                url('../imgs/Dreamy Café Interiors – Aesthetic Coffee Shop Design Inspiration.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: var(--wheat);
+}
+
+.page-header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 1.5rem;
+    align-items: center;
+    background-color: var(--brown-header);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: var(--shadow);
+}
+
+.page-header figure img {
+    height: 70px;
+    width: auto;
+}
+
+.btn-menu {
+    height: 40px;
+    width: 40px;
+    background-color: transparent;
+    border: 1px solid var(--wheat);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-menu:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.btn-menu > i {
+    font-size: 20px;
+    color: var(--wheat);
+}
+
+.nav-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 100%;
+    background-color: var(--brown-header);
+    padding: 20px;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 10px 10px rgba(0,0,0,0.2);
+    border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+.nav-menu-toggle {
+    display: flex; 
+    animation: slideDown 0.3s ease forwards;
+}
+
+@keyframes slideDown {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.nav-itens {
+    list-style: none;
+    text-align: center;
+    width: 100%;
+}
+
+.nav-itens li {
+    margin-bottom: 15px;
+}
+
+.nav-itens a {
+    text-decoration: none;
+    color: var(--wheat);
+    font-size: 1.1rem;
+    font-weight: 500;
+    display: block;
+    padding: 10px;
+    transition: color 0.2s;
+}
+
+.nav-itens a:hover {
+    color: var(--orange-btn);
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.presentation {
+    padding: 40px 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+}
+
+.presentation h1 {
+    font-size: 2.5rem;
+    line-height: 1.2;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.presentation p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    opacity: 0.9;
+}
+
+.presentation > button, .text > button {
+    background-color: var(--orange-btn);
+    border: none;
+    border-radius: 8px;
+    padding: 10px 24px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: var(--shadow);
+    color: white;
+}
+
+.presentation > button:hover, .text > button:hover {
+    background-color: var(--orange-btn-hover);
+    transform: translateY(-2px);
+}
+
+.month-artist {
+    background-color: var(--brown-card);
+    border-radius: 16px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    backdrop-filter: blur(5px);
+    box-shadow: var(--shadow);
+}
+
+.artist-image {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.artist-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.5s;
+}
+
+.artist-image img:hover {
+    transform: scale(1.03);
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    text-align: center;
+}
+
+.text h2 {
+    font-size: 1.8rem;
+    color: var(--orange-btn);
+}
+
+.text p {
+    line-height: 1.6;
+    font-size: 1rem;
+    color: #ddd;
+}
+
+@media (min-width: 768px) {
+    .btn-menu {
+        display: none; 
+    }
+
+    .nav-menu {
+        display: flex; 
+        position: static; 
+        width: auto;
+        background: transparent;
+        padding: 0;
+        box-shadow: none;
+        border: none;
+        flex-direction: row;
+    }
+    
+    .nav-itens {
+        display: flex;
+        gap: 30px;
+    }
+    
+    .nav-itens li {
+        margin-bottom: 0;
+    }
+    
+    .nav-itens a::after {
+        content: '';
+        display: block;
+        width: 0;
+        height: 2px;
+        background: var(--orange-btn);
+        transition: width .3s;
+    }
+    
+    .nav-itens a:hover::after {
+        width: 100%;
+    }
+
+    .presentation h1 {
+        font-size: 4rem;
+    }
+
+    .month-artist {
+        flex-direction: row; 
+        align-items: center;
+        padding: 40px;
+        text-align: left;
+    }
+
+    .artist-image {
+        flex: 1;
+        max-width: 400px;
+    }
+
+    .text {
+        flex: 1;
+        align-items: flex-start; 
+        text-align: left;
+        padding-left: 20px;
+    }
+}
