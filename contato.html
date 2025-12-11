@@ -38,9 +38,9 @@
                 <img src="./imgs/Png.png" alt="Coração feito de grãos de café">
             </div>
             <div class="gallery-text">
-                <h1>Our Shop</h1>
-                <h2>Our dream gallery</h2>
-                <p>Boost your productivity and build your mood with a short break in the most comfortable place. Boost your productivity</p>
+                <h1>Nossa Loja</h1>
+                <h2>Nossa galeria de sonhos</h2>
+                <p>Aumente sua produtividade e melhore seu humor com uma pequena pausa no lugar mais confortável. Aumente sua produtividade</p>
             </div>
         </section>
 
@@ -52,14 +52,14 @@
         </section>
         
         <section class="contact-form">
-            <h3>Entre em Contato</h3>
-            <form action="#" method="POST">
-                <input type="text" id="nome" name="nome" placeholder="Nome Completo" required>
-                <input type="email" id="email" name="email" placeholder="Email" required>
-                <input type="tel" id="telefone" name="telefone" placeholder="Número de Telefone">
-                <input type="url" id="portfolio" name="portfolio" placeholder="Link do Portfólio (Opcional)">
-                <textarea id="mensagem" name="mensagem" placeholder="Mensagem" rows="5" required></textarea>
-                <button type="submit" class="btn-submit">Enviar</button>
+            <form action="" method="post">
+                <h3>Entre em Contato</h3>
+                    <input type="text" id="nome" name="nome" placeholder="Nome Completo" required>
+                    <input type="email" id="email" name="email" placeholder="Email" required>
+                    <input type="tel" id="telefone" name="telefone" placeholder="Número de Telefone">
+                    <input type="url" id="portfolio" name="portfolio" placeholder="Link do Portfólio (Opcional)">
+                    <textarea id="mensagem" name="mensagem" placeholder="Mensagem" rows="5" required></textarea>
+                    <button type="submit" class="btn-submit" id="btn-submit">Enviar</button>
             </form>
         </section>
 
@@ -68,5 +68,14 @@
         <p>Feito por Léo Henrique e Matheus Machado &copy;2025</p>
     </footer>
     <script src="./script.js"></script>
+    <script>
+        const btnSubmit = document.getElementById('btn-submit');
+        btnSubmit.addEventListener('click', (e) => {
+            e.preventDefault();
+            setTimeout(() =>{
+                alert('Mensagem Enviada!')
+            }, 300);
+        });
+    </script>
 </body>
 </html>
