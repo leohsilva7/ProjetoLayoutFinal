@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Shop - Our Dream Gallery</title>
+    <link rel="stylesheet" href="./css/contato.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="page-header">
+        <figure>
+            <img src="./imgs/Gemini_Generated_Image_ouh23oouh23oouh2-removebg-preview 2.png" alt="Logo Cardápio - Léo">
+        </figure>
+
+        <button class="btn-menu" id="btn-menu" aria-label="Abrir menu de navegação">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <nav class="nav-menu" id="menu">
+            <ul class="nav-itens">
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./cardapio.html">Cardápio</a></li>
+                <li><a href="./galeria.html">Galeria do Artista</a></li>
+                <li><a href="./contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="content">
+
+        <section class="gallery-hero">
+            <div class="gallery-image">
+                <img src="./imgs/Png.png" alt="Coração feito de grãos de café">
+            </div>
+            <div class="gallery-text">
+                <h1>Our Shop</h1>
+                <h2>Our dream gallery</h2>
+                <p>Boost your productivity and build your mood with a short break in the most comfortable place. Boost your productivity</p>
+            </div>
+        </section>
+
+        <section class="map-section">
+            <h3>Nossa Localização</h3>
+            <div class="map-container">
+                <img src="./imgs/Captura de tela_20251125_145438 1.png" alt="Mapa de localização em Marília">
+            </div>
+        </section>
+        
+        <section class="contact-form">
+            <h3>Entre em Contato</h3>
+            <form action="#" method="POST">
+                <input type="text" id="nome" name="nome" placeholder="Nome Completo" required>
+                <input type="email" id="email" name="email" placeholder="Email" required>
+                <input type="tel" id="telefone" name="telefone" placeholder="Número de Telefone">
+                <input type="url" id="portfolio" name="portfolio" placeholder="Link do Portfólio (Opcional)">
+                <textarea id="mensagem" name="mensagem" placeholder="Mensagem" rows="5" required></textarea>
+                <button type="submit" class="btn-submit">Enviar</button>
+            </form>
+        </section>
+
+    </main>
+    <footer class="rodape">
+        <p>Feito por Léo Henrique e Matheus Machado &copy;2025</p>
+    </footer>
+    <script src="./script.js"></script>
+</body>
+</html>

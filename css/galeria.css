@@ -1,6 +1,6 @@
 :root {
     --dark-brown: #240C03;
-    --brown-header: rgba(36, 12, 3, 0.90);
+    --brown-header: rgba(36, 12, 3, 1);
     --orange-btn: #E19517;
     --orange-btn-hover: #c58315;
     --text-neutral: #374151;
@@ -12,8 +12,8 @@
 }
 
 * {
-    padding: 0;
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
@@ -21,13 +21,8 @@ body {
     width: 100%;
     min-height: 100vh;
     font-family: "Inter", sans-serif;
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
-                url('../imgs/Dreamy Café Interiors – Aesthetic Coffee Shop Design Inspiration.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
     color: var(--wheat);
+    background-color: var(--wheat);
 }
 
 .page-header {
@@ -44,7 +39,7 @@ body {
 }
 
 .page-header figure img {
-    height: 70px;
+    height: 50px;
     width: auto;
 }
 
@@ -119,116 +114,98 @@ body {
 }
 
 .container {
-    width: 100%;
+    width: 90%;
     max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
+    margin: 40px auto;
 }
 
-.presentation {
-    padding: 40px 10px;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    gap: 20px;
+.header {
     text-align: center;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.presentation h1 {
-    font-size: 2.5rem;
-    line-height: 1.2;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+.coracao {
+    width: 120px;
+    margin-bottom: 10px;
 }
 
-#changing-word {
-    border-right: 2px solid var(--orange-btn); 
-    padding-right: 5px; 
-    display: inline-block; 
-    animation: blink 0.7s step-end infinite;
+.header-texto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-@keyframes blink {
-    from, to { border-right-color: transparent }
-    50% { border-right-color: var(--orange-btn); }
+.header h1 {
+    font-size: 48px;
+    color: #55321f;
+    margin: 10px 0;
+    font-weight: 400;
 }
 
-.presentation p {
-    font-size: 1.2rem;
-    max-width: 600px;
+.subtitulo {
+    font-size: 18px;
+    color: #452012;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.texto-centro {
+    width: 90%;
+    margin: auto;
+    font-size: 14px;
+    color: #7d7d7d;
+    line-height: 1.5;
+}
+
+.galeria {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.galeria .item {
+    width: 100%;
+}
+
+.galeria img {
+    width: 100%;
+    height: 220px;
+    border-radius: 18px;
+    display: block;
+    object-fit: cover;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.galeria img:hover {
+    transform: scale(1.02);
+}
+.rodape {
+    width: 100%;
+    background-color: var(--brown-header);
+    padding: 1.5rem 1rem;
+    margin-top: 40px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rodape p {
+    font-size: 0.875rem;
+    color: var(--wheat);
+    font-weight: 300;
+    letter-spacing: 0.5px;
     opacity: 0.9;
 }
-
-.presentation > button, .text > button {
-    background-color: var(--orange-btn);
-    border: none;
-    border-radius: 8px;
-    padding: 10px 24px;
-    font-size: 1rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.2s;
-    box-shadow: var(--shadow);
-    color: white;
-}
-
-.presentation > button:hover, .text > button:hover {
-    background-color: var(--orange-btn-hover);
-    transform: translateY(-2px);
-}
-
-.month-artist {
-    background-color: var(--brown-card);
-    border-radius: 16px;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    backdrop-filter: blur(5px);
-    box-shadow: var(--shadow);
-}
-
-.artist-image {
-    width: 100%;
-    overflow: hidden;
-    border-radius: 12px;
-}
-
-.artist-image img {
-    width: 100%;
-    height: auto;
-    display: block;
-    transition: transform 0.5s;
-}
-
-.artist-image img:hover {
-    transform: scale(1.03);
-}
-
-.text {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
-    text-align: center;
-}
-
-.text h2 {
-    font-size: 1.8rem;
-    color: var(--orange-btn);
-}
-
-.text p {
-    line-height: 1.6;
-    font-size: 1rem;
-    color: #ddd;
-}
-
 @media (min-width: 768px) {
+
     .btn-menu {
-        display: none; 
+        display: none;
     }
 
     .nav-menu {
@@ -264,26 +241,71 @@ body {
         width: 100%;
     }
 
-    .presentation h1 {
-        font-size: 4rem;
+    .page-header figure img {
+        height: 70px;
     }
 
-    .month-artist {
-        flex-direction: row; 
+    .header {
+        flex-direction: row;
+        justify-content: center;
         align-items: center;
-        padding: 40px;
-        text-align: left;
+        gap: 60px;
+        margin-bottom: 60px;
+        text-align: right;
     }
 
-    .artist-image {
-        flex: 1;
-        max-width: 400px;
+    .coracao {
+        width: 200px;
+        margin-bottom: 0;
     }
 
-    .text {
-        flex: 1;
-        align-items: flex-start; 
-        text-align: left;
-        padding-left: 20px;
+    .header-texto {
+        align-items: flex-end;
+        max-width: 500px;
+    }
+
+    .header h1 {
+        font-size: 80px;
+        margin: 0;
+        line-height: 1;
+    }
+
+    .subtitulo {
+        font-size: 24px;
+        margin-top: 10px;
+    }
+
+    .texto-centro {
+        width: 100%;
+        margin: 0;
+        text-align: right;
+    }
+
+    .galeria {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1.5fr; 
+        grid-template-rows: 280px 280px; 
+        gap: 20px;
+        grid-template-areas: 
+            "area-flores  area-flores  area-rosto"
+            "area-rosa    area-iris    area-rosto";
+    }
+
+    .item1 { grid-area: area-flores; }
+    .item2 { grid-area: area-rosto; }
+    .item3 { grid-area: area-rosa; }
+    .item4 { grid-area: area-iris; }
+
+    .galeria img {
+        height: 100%; 
+        width: 100%;
+    }
+    .rodape {
+        padding: 2rem;
+        margin-top: 60px;
+    }
+
+    .rodape p {
+        font-size: 1rem;
     }
 }
